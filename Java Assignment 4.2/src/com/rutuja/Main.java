@@ -17,7 +17,7 @@ public class Main {
         int size = nums.length; // 5
         int[] a = new int[size];
 
-        for (int i = 0; i < size; i++){ 
+        for (int i = 0; i < size; i++){
             int product = (nums[nums[i]] % size) * size + nums[i];
             a[i] = product;
         }
