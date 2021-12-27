@@ -8,19 +8,24 @@ public class Main {
 	    // write your code here
         // Fine the floor of a number
         // floor -> greater number smaller or equal to target
-        5Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int[] arr = {2, 3, 5, 9, 14, 16, 18};
 
         System.out.println("Enter target: ");
         int target = in.nextInt();
 
-        int ans = searchNumber(arr, target);
+        int ans = floor(arr, target);
         System.out.println(ans);
     }
 
-    private static int searchNumber(int[] arr, int target) {
+    // return the index: greatest number <= target
+    private static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
+
+        if(target > arr[arr.length - 1]){
+            return -1;
+        }
 
         while (start <= end){
             int mid = start + (end - start) / 2;

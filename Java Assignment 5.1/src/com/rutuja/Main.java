@@ -14,11 +14,11 @@ public class Main {
         System.out.println("Enter target: ");
         int target = in.nextInt();
 
-        int ans = searchNumber(arr, target);
+        int ans = ceiling(arr, target);
         System.out.println(ans);
     }
 
-    private static int searchNumber(int[] arr, int target) {
+    private static int ceiling(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 
